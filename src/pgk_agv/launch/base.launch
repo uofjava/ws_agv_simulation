@@ -1,0 +1,4 @@
+<launch>
+    <node name="robot_modbus" pkg="pgk_agv" type="hc_robot_node.py" output="screen"></node>
+    <node name="robot_mqtt" pkg="pgk_agv" type="hc_robot_mqtt_node.py" output="screen"></node>
+</launch>

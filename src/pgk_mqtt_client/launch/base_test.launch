@@ -1,0 +1,8 @@
+<launch>
+    <node name="pgk_mqtt_client" pkg="pgk_mqtt_client" type="modbus_tcp_node.py" output="screen">
+    </node>
+    <node name="mqtt_node" pkg="pgk_mqtt_client" type="mqtt_node.py" output="screen">
+        <rosparam command="load" file="$(find pgk_mqtt_client)/config/mqtt_params.yml"/>
+    </node>
+    
+</launch>

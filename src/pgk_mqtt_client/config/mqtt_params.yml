@@ -1,0 +1,15 @@
+mqtt:
+  client:
+    protocol: 4
+  connection:
+    host: "192.168.3.66"
+    port: 1883
+    keepalive: 60
+  bridge:
+    - msg_type: std_msgs.msg:Int32MultiArray
+      topic_from: hc_1
+      to_mqtt_tcp: /hc_1
+    - msg_type: std_msgs.msg:Int32MultiArray
+      topic_from: hc_1
+      to_mqtt_tcp: /hc_1  
+        

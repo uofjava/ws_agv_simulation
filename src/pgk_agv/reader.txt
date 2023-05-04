@@ -1,0 +1,5 @@
+pgk_agv 实现modbus_tcp 采集并发布到mqtt
+根据config/modbus_params配置文件配置保存寄存器采集点及发布到ros 话题
+根据config/mqtt_params配置文件配置mqtt 订阅ros话题及发布到mqtt 主题
+base.launch 默认加载modbus_params.yml mqtt_params.yml
+test_base.launch 根据自定义加载 modbus_test_params.yml mqtt_test_params.yml

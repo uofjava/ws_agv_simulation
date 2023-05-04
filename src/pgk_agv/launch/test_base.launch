@@ -1,0 +1,8 @@
+<launch>
+    <node name="robot_modbus" pkg="pgk_agv" type="hc_robot_node.py" output="screen">
+        <rosparam command="load" file="$(find pgk_agv)/config/modbus_test_params.yml"/>
+    </node>
+    <node name="robot_mqtt" pkg="pgk_agv" type="hc_robot_mqtt_node.py" output="screen">
+        <rosparam command="load" file="$(find pgk_agv)/config/mqtt_test_params.yml"/>
+    </node>
+</launch>

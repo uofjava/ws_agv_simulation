@@ -1,0 +1,41 @@
+mqtt:
+  client:
+    protocol: 4
+  connection:
+    host: '192.168.3.66'
+    port: 1883
+    keepalive: 60
+  bridge:
+    - msg_type: std_msgs.msg:Int32MultiArray
+      topic_from: hc_1
+      to_mqtt_tcp: /hc_1
+      registerconfig: 
+          # 首地址
+        - address: 0
+          # 数量
+          count: 12
+          # 该项数据标记
+          tag: 'info1'
+        - address: 12
+          count: 20
+          tag: 'info2'
+        - address: 32
+          count: 8
+          tag: 'info3'
+    - msg_type: std_msgs.msg:Int32MultiArray
+      topic_from: hc_2
+      to_mqtt_tcp: /hc_2
+      registerconfig: 
+          # 首地址
+        - address: 0
+          # 数量
+          count: 12
+          # 该项数据标记
+          tag: 'info1'
+        - address: 12
+          count: 20
+          tag: 'info2'
+        - address: 32
+          count: 8
+          tag: 'info3'      
+        

@@ -1,0 +1,32 @@
+modbus:
+  servers:
+      # ip
+    - host: '192.168.3.54'
+      # 端口
+      port: 502
+      # 发布到ROS主题
+      id: 'hc_1'
+      # 采集频率1/s
+      rate: 1
+      # 站号
+      slave: 1
+      # ros发布消息格式
+      msg_type: std_msgs.msg:Int32MultiArray
+      # 采集总数
+      registerAllCount: 40
+      # 16进制保存寄存器采集配置
+      registerconfig:
+          # 首地址
+        - address: 0
+          # 数量
+          count: 12
+          # 该项数据标记
+          tag: 'info1'
+        - address: 12
+          count: 20
+          tag: 'info2'
+        - address: 32
+          count: 8
+          tag: 'info3'
+        
+    
